@@ -23,14 +23,14 @@ $(document).ready(function() {
                     $('[data-id="'+value.index+'"]').append(title); //Add the title to the callout div
                     var description = $('<p>').html(value.extract); //Add the summary to the callout in a paragraph tag
                     $('[data-id="'+value.index+'"]').append(description);
-                    $('[data-id="'+value.index+'"]').append('<a href="https://en.wikipedia.org/?curid='+key+'" target="_blank" class="btn btn-primary">More</a>');
+                    $('[data-id="'+value.index+'"]').append('<a href="//en.wikipedia.org/?curid='+key+'" target="_blank" class="btn btn-primary">More</a>');
                 });
                 $('results div').sort(function (a, b) {
                     return $(a).data('id') - $(b).data('id');
                 }).map(function () {
                     return $(this).closest('results div');
                 }).each(function (_, container) {
-                    $(container).parent().append(container);
+                    $(container).parent().append(container); //Sort the callout divs on the page
                 });
             },
             error: function(errorMessage) {
