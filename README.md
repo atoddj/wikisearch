@@ -9,7 +9,7 @@ Project to learn how to implement the mediawiki API for searching and random art
 
 ## Usage
 
-http://toddj.com/wikisearch
+http://atoddj.github.io/wikisearch
 
 ## Contributing
 
