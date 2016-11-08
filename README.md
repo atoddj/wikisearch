@@ -3,6 +3,12 @@
 Project to learn how to implement the mediawiki API for searching and random article.
 `https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer`
 
+## To-Do
+
+* Add multiple search results
+* Automatically normalize search input
+
+
 ## Usage
 
 http://toddj.com/wikisearch
