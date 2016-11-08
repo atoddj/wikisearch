@@ -7,7 +7,7 @@ Project to learn how to implement the mediawiki API for searching and random art
 
 * Add multiple search results
 * Automatically normalize search input
-
+* Add error handling for submitting a search with no text
 
 ## Usage
 
