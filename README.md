@@ -4,7 +4,8 @@ Project to learn how to implement the mediawiki API for searching and random art
 `https://www.freecodecamp.com/challenges/build-a-wikipedia-viewer`
 
 ## To-Do
-
+~~* Add multiple search results~~
+~~* Automatically normalize search input~~
 * Add error handling for submitting a search with no text
 
 ## Usage
