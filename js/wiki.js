@@ -13,8 +13,8 @@ $(document).ready(function() {
             dataType: "json",
             success: function(data, textStatus, jqXHR) {
                 $('results').html('');
-                $.each(data.query.pages, function(key, value, index) {
-                    console.log(value);
+                $.each(data.query.pages, function(key, value) {
+
                     var callout = $('<div>')
                     .attr('class', 'bs-callout bs-callout-default')
                     .attr('id', 'result-'+value.ns);
