@@ -15,7 +15,6 @@ $(document).ready(function() {
             success: function(data, textStatus, jqXHR) {
                 $('results').html(''); //Remove all html from the results
                 $.each(data.query.pages, function(key, value) { //Iterate over the pages
-                    console.log(value);
                     var callout = $('<div>')
                     .attr('class', 'bs-callout bs-callout-default')
                     .attr('id', 'result-'+value.index); //Create and insert a callout div with id of the NS result
