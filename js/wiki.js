@@ -17,18 +17,23 @@ $(document).ready(function() {
                 $.each(data.query.pages, function(key, value) { //Iterate over the pages
                     var callout = $('<div>')
                     .attr('class', 'bs-callout bs-callout-default')
-                    .attr('id', 'result-'+value.index); //Create and insert a callout div with id of the NS result
-                    $('results').append(callout); //Add the callout div to the pages
+                    .attr('data-id', value.index); //Create and insert a callout div with id of the NS results
+                    $('results').append(callout);
                     var title = $('<h4>').html(value.title); //Get the title of the current iteration
-                    $('#result-'+value.index).append(title); //Add the title to the callout div
+                    $('[data-id="'+value.index+'"]').append(title); //Add the title to the callout div
                     var description = $('<p>').html(value.extract); //Add the summary to the callout in a paragraph tag
-                    $('#result-'+value.index).append(description);
-                    $('#result-'+value.index).append('<a href="https://en.wikipedia.org/?curid='+key+'" target="_blank" class="btn btn-primary">More</a>');
+                    $('[data-id="'+value.index+'"]').append(description);
+                    $('[data-id="'+value.index+'"]').append('<a href="https://en.wikipedia.org/?curid='+key+'" target="_blank" class="btn btn-primary">More</a>');
+                });
+                $('results div').sort(function (a, b) {
+                    return $(a).data('id') - $(b).data('id');
+                }).map(function () {
+                    return $(this).closest('results div');
+                }).each(function (_, container) {
+                    $(container).parent().append(container);
                 });
             },
             error: function(errorMessage) {
-
-
             }
         });
     }); //end search click
