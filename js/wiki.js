@@ -32,6 +32,7 @@ $(document).ready(function() {
                 }).each(function (_, container) {
                     $(container).parent().append(container); //Sort the callout divs on the page
                 });
+                $('[target="_blank"]').attr('rel', 'noopener noreferrer');
             },
             error: function(errorMessage) {
             }
@@ -39,9 +40,9 @@ $(document).ready(function() {
     }); //end search click
 
     $("#userInput").keyup(function(event){
-    if(event.keyCode == 13){ //If pushing 'enter' key in the input field, trigger a click event for the search button
-        $("#search").click();
-    }
-});
-
+        if(event.keyCode == 13){ //If pushing 'enter' key in the input field, trigger a click event for the search button
+            $("#search").click();
+        }
+    });
+    
 });
